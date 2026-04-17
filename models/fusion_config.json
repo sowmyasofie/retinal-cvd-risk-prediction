@@ -1,0 +1,10 @@
+{
+    "retinal_weight": 0.65,
+    "clinical_weight": 0.35,
+    "risk_thresholds": {
+        "low": 0.3,
+        "moderate": 0.6
+    },
+    "model_type": "decision_level_fusion",
+    "note": "Screening tool, not diagnostic"
+}

@@ -1,0 +1,181 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #0a4f63;
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* Make mobile responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1f7a8c;
+    box-shadow: 0 0 4px rgba(31,122,140,0.4);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    margin-top: 30px;
+    padding: 20px;
+    background: #1f7a8c;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #155e6c;
+}
+
+/* =========================
+   RESULT SECTION
+========================= */
+
+.result {
+    align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+}
+
+.result h2 {
+    text-align: center;
+    font-size: 60px;
+    color: #0a4f63;
+    margin-bottom: 20px;
+}
+
+.result h3 {
+    margin-top: 25px;
+    color: #1f7a8c;
+}
+
+.result p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.result ul {
+    padding-left: 20px;
+}
+
+.result li {
+    margin-bottom: 6px;
+}
+
+/* =========================
+   RISK CATEGORY COLORS
+========================= */
+
+.low {
+    color: green;
+    font-weight: bold;
+}
+
+.moderate {
+    color: orange;
+    font-weight: bold;
+}
+
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* =========================
+   HIDDEN CLASS
+========================= */
+
+.hidden {
+    display: none;
+}

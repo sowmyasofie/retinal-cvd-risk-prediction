@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retinal CVD Risk Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Retinal Cardiovascular Risk Assessment</h1>
+        <p class="subtitle">
+            Check your cardiovascular risk using retinal microvascular patterns
+            combined with basic clinical indicators.
+        </p>
+
+        <form id="riskForm">
+            <div class="grid">
+
+                <!-- Retinal Image -->
+                <div class="field">
+                    <label>Retinal Image</label>
+                    <input type="file" id="image" name="file" required />
+                </div>
+
+                <!-- Age -->
+                <div class="field">
+                    <label>Age</label>
+                    <input type="number" id="age" name="age" required />
+                </div>
+
+                <!-- Sex -->
+                <div class="field">
+                    <label>Sex</label>
+                    <select id="sex" name="sex" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <!-- Systolic BP -->
+                <div class="field">
+                    <label>Systolic BP (mmHg)</label>
+                    <input type="number" id="sys_bp" name="sys_bp" placeholder="Normal < 120" />
+                </div>
+
+                <!-- Diastolic BP -->
+                <div class="field">
+                    <label>Diastolic BP (mmHg)</label>
+                    <input type="number" id="dia_bp" name="dia_bp" placeholder="Normal < 80" />
+                </div>
+
+                <!-- Diabetes -->
+                <div class="field">
+                    <label>Diabetes Status</label>
+                    <select id="diabetes" name="diabetes" required>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                        <option value="unknown">Don't Know</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit">Assess Risk</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="hidden">
+            <h2>Risk Result</h2>
+
+            <p>
+                <strong>Risk Percentage:</strong>
+                <span id="riskPercentage">0</span>%
+            </p>
+
+            <p>
+                <strong>Category:</strong>
+                <span id="riskCategory"></span>
+            </p>
+
+            <h3>Clinical Interpretation</h3>
+            <p id="explanation"></p>
+
+            <h3>Recommended Precautions</h3>
+            <ul id="recommendations"></ul>
+
+            <button id="downloadReport">Download Report</button>
+
+            <p class="disclaimer">
+                Disclaimer: This tool is for screening and educational purposes only.
+                It is not a medical diagnosis. Please consult a qualified healthcare
+                professional for proper clinical evaluation.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
